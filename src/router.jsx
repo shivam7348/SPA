@@ -6,6 +6,7 @@ import Products from "./components/Pages/Developers";
 import Github from "./components/Pages/Servicing";
 import About from "./About/About";
 import HospitalManagementSystem from "./Products/HealthCare/HospitalManagementSystem";
+import HostelManagementSystem from "./Products/Education/HostelManagementSystem";
 
 const router = createBrowserRouter([
   {
@@ -13,7 +14,7 @@ const router = createBrowserRouter([
     element: <Layout />,
     children: [
       {
-        path: "/", 
+        path: "", 
         element: <Home />,
       },
       {
@@ -23,6 +24,15 @@ const router = createBrowserRouter([
       {
         path: "products",
         element: <Products />,
+        children: [
+          {
+            path: "hospital",
+            element: <HostelManagementSystem/>
+          },
+          {
+            path: 
+          }
+        ]
         
       },
       {
